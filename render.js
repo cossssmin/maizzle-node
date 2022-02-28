@@ -6,6 +6,13 @@ const options = {
     inlineCSS: true,
     removeUnusedCSS: true,
   },
+  tailwind: {
+    css: `
+      @tailwind components;
+      p { @apply text-slate-700 };
+      @tailwind utilities;
+    `,
+  }
 }
 
 const source = fs.readFileSync('./test.html', 'utf8')
